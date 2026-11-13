@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a study room | Cougar Commons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Public+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header" class="topnav"></header>
+
+  <main class="wrap">
+    <section class="feature single" style="border-top:0">
+      <div>
+        <h1>Book a study room</h1>
+        <p>Rooms can be booked up to 14 days ahead, for up to 3 hours. Every field is required.</p>
+
+        <form id="booking-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error">
+              <span class="error" id="name-error"></span>
+            </div>
+            <div class="field">
+              <label for="email">UH email</label>
+              <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+              <span class="error" id="email-error"></span>
+            </div>
+            <div class="field">
+              <label for="room">Study room</label>
+              <select id="room" name="room" aria-describedby="room-error">
+                <option value="">Choose a room</option>
+                <option value="Study Room 1" data-capacity="2">Study Room 1 (up to 2 people)</option>
+                <option value="Study Room 2" data-capacity="4">Study Room 2 (up to 4 people)</option>
+                <option value="Study Room 3" data-capacity="4">Study Room 3 (up to 4 people)</option>
+                <option value="Study Room 4" data-capacity="6">Study Room 4 (up to 6 people)</option>
+                <option value="Study Room 5" data-capacity="8">Study Room 5 (up to 8 people)</option>
+              </select>
+              <span class="error" id="room-error"></span>
+            </div>
+            <div class="field">
+              <label for="guests">Number of people</label>
+              <input id="guests" name="guests" type="number" min="1" inputmode="numeric" aria-describedby="guests-error">
+              <span class="error" id="guests-error"></span>
+            </div>
+            <div class="field">
+              <label for="date">Date</label>
+              <input id="date" name="date" type="date" aria-describedby="date-error">
+              <span class="error" id="date-error"></span>
+            </div>
+            <div class="field">
+              <label for="start">Start time</label>
+              <select id="start" name="start" aria-describedby="start-error">
+                <option value="">Choose a time</option>
+              </select>
+              <span class="error" id="start-error"></span>
+            </div>
+            <div class="field">
+              <label for="duration">How long</label>
+              <select id="duration" name="duration" aria-describedby="duration-error">
+                <option value="">Choose a length</option>
+                <option value="1">1 hour</option>
+                <option value="2">2 hours</option>
+                <option value="3">3 hours</option>
+              </select>
+              <span class="error" id="duration-error"></span>
+            </div>
+          </div>
+          <button class="btn" type="submit">Request room</button>
+        </form>
+
+        <div id="confirmation" class="confirm" role="status" tabindex="-1" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Cougar Commons. A student center for a class project.</p>
+      <p>Questions? <a href="index.html#developer-contact">Contact the developer</a>.</p>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script src="booking.js"></script>
+</body>
+</html>
